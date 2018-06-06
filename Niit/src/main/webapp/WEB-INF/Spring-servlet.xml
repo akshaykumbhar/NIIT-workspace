@@ -27,7 +27,9 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	
+	<bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<constructor-arg value="6"></constructor-arg>
+	</bean>
 	
 	<mvc:resources mapping="/image/**" location="/resources/image/" />
 	<mvc:annotation-driven></mvc:annotation-driven>

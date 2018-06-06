@@ -19,7 +19,7 @@
 </div>
 </header>
 <div class="login-container">
-<form action="" method="post" style="padding-top: 7%;padding-left: 7%;font-size: 149%;">
+<form action="userregister" method="post" style="padding-top: 7%;padding-left: 7%;font-size: 149%;">
 Email<br>
 <input type="text" name="email" ><br>
 Username<br>

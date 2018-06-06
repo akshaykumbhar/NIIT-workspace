@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE>
 <html>
 <head>
@@ -19,7 +18,7 @@
 </div>
 </header>
 <div class="login-container">
-<form action="" method="post" style="padding-top: 10%;padding-left: 7%;font-size: 149%;">
+<form action="<c:url value='/j_spring_security_check' />" method="post" style="padding-top: 10%;padding-left: 7%;font-size: 149%;">
 Username<br>
 <input type="text" name="username" ><br>
 Password<br>
@@ -29,5 +28,9 @@ Password<br>
 <br>
 <a href="register" style="font-size:130%;float: left;margin:10%;padding-left: 14%;color: black;">New Member? Register Here</a>
 </div>
+<script type="text/javascript">
+
+
+</script>
 </body>
 </html>
