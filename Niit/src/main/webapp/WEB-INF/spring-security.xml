@@ -11,12 +11,12 @@
 
 
 	<security:http auto-config="true">
-		<security:intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
-		
+		<security:intercept-url pattern="/admin**" access="ROLE_ADMIN" />
+		<security:intercept-url pattern="/account" access="ROLE_USER,ROLE_ADMIN"/>
 		<form-login 
 		    login-page="/login" 
-		    default-target-url="/welcome" 
-			authentication-failure-url="/login?error" 
+		    default-target-url="/" 
+			authentication-failure-url="/loginerror" 
 			username-parameter="username"
 			password-parameter="password" />
 		
@@ -24,15 +24,17 @@
 		</security:http>
 	
 	<beans:import resource="spring-database.xml"/>
+	<beans:import resource="Spring-servlet.xml"/>
+	
  <security:authentication-manager>
         <security:authentication-provider>
-        
+        	<security:password-encoder ref="encoder"></security:password-encoder>
        
             <security:jdbc-user-service data-source-ref="dataSource"
 		  users-by-username-query=
 		    "select username,password, enabled from users where username=?"
 		  authorities-by-username-query=
-		    "select username, role from user_roles where username =?  " />
+		    "select username, role from userroles where username =?  " />
         </security:authentication-provider>
     </security:authentication-manager>
  

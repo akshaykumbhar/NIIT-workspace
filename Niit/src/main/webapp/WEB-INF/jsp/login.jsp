@@ -16,7 +16,10 @@
 <a href="product"><button class="btn-normal">Product</button></a>
 <a href="home"><button class="btn-normal">Home</button></a>
 </div>
+
 </header>
+
+<h1 id="a2" class="alertm">You are Successfully Register</h1>
 <div class="login-container">
 <form action="<c:url value='/j_spring_security_check' />" method="post" style="padding-top: 10%;padding-left: 7%;font-size: 149%;">
 Username<br>
@@ -29,6 +32,12 @@ Password<br>
 <a href="register" style="font-size:130%;float: left;margin:10%;padding-left: 14%;color: black;">New Member? Register Here</a>
 </div>
 <script type="text/javascript">
+var msg = ${message};
+if(msg == 1)
+{
+	var al1= document.getElementById("a2");
+	al1.style.display="block";
+}
 
 
 </script>

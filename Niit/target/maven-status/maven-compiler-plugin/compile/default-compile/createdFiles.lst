@@ -1,0 +1,6 @@
+org\hibernates\DOAproduct.class
+org\hibernates\Product.class
+org\controller\MainController.class
+org\hibernates\Users.class
+org\hibernates\DOAuser.class
+org\hibernates\Userroles.class

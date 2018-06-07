@@ -27,14 +27,22 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	<bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
-		<constructor-arg value="6"></constructor-arg>
-	</bean>
+	<bean id="encoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+
+		<constructor-arg value="12" />
+</bean>
 	
 	<mvc:resources mapping="/image/**" location="/resources/image/" />
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<mvc:resources mapping="/css/**" location="/resources/css/" />
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<mvc:resources mapping="/js/**" location="/resources/js/" />
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:resources mapping="/user/image/**" location="/resources/image/" />
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:resources mapping="/user/css/**" location="/resources/css/" />
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:resources mapping="/user/js/**" location="/resources/js/" />
 	<mvc:annotation-driven></mvc:annotation-driven>
 </beans>

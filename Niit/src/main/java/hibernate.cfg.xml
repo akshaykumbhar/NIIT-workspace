@@ -55,8 +55,9 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="org.hibernate.Users"/>
-        <mapping class="org.hibernate.User_roles"/>
+        <mapping class="org.hibernates.Users"/>
+        <mapping class="org.hibernates.Userroles"/>
+        <mapping class="org.hibernates.Product"/>
 
     </session-factory>
 
