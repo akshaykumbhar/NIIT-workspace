@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 public  class DOAuser {
 
 	
-	public static int duser(String username,String password)
+	public static int duser(String username,String password,String email,String fname,String lname,String phone,String address)
 	{
 		try{
 		SessionFactory sessionfactory = new Configuration().configure().buildSessionFactory();
@@ -18,6 +18,11 @@ public  class DOAuser {
 		session.beginTransaction();
 		Users u = new Users();
 		Userroles ur = new Userroles();
+		u.setAddress(address);
+		u.setEmail(email);
+		u.setFname(fname);
+		u.setLname(lname);
+		u.setPhone(phone);
 		u.setUsername(username);
 		u.setEnabled(1);
 		u.setPassword(password);
@@ -34,6 +39,26 @@ public  class DOAuser {
 			return 0 ;
 		}
 	}
+		public static void update(String username,String email,String fname,String lname,String phone,String address)
+		{
+			SessionFactory sessionfactory = new Configuration().configure().buildSessionFactory();
+			Session session = sessionfactory.openSession();
+			session.beginTransaction();
+			Users u = session.get(Users.class, username);
+			u.setAddress(address);
+			u.setEmail(email);
+			u.setFname(fname);
+			u.setLname(lname);
+			u.setPhone(phone);
+			u.setUsername(username);
+			u.setEnabled(1);
+			
+			session.getTransaction().commit();
+			session.close();
+		}
+		
+		
+	
 	public static Users getuser(String uname)
 
 	{

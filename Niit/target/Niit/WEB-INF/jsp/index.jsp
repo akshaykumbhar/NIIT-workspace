@@ -21,15 +21,18 @@ ${admin}
 <div class="slider">
 <div class="left-arrow" onclick='left()'><b>&#60;</b></div>
 <div class="right-arrow" onclick='right()'><b>&#62;</b></div>
-<div style="width:100%;height:100%;"><img id="image_slider"src="image/image1.jpg" id="slider" width="100%" height="100%"style="margin-top:-527px;"></div>
+<div style="width:100%;height:100%;"><img id="image_slider"src="image/image1.jpg" id="slider" width="100%" height="100%"style="margin-top:-331px;"></div>
 </div>
-<div  style="margin-top:-10px;width=100%">
+<div  style="margin-top:-10px;width:100%;hight:10px">
+</div>
+<div class="productcont">
+<c:forEach items="${product}" var="i"  end="3">
 
-<c:forEach items="${product}" var="i">
 <div class="product">
-<h1>${i.getName()}</h1>
-<h2>Price:${i.getPrice()}</h2>
-<h3>Decription:${i.getDescription()}</h3></div>
+<h1><a href="productpage?id=${i.getProductId()}">${i.getName()}</a></h1>
+<h2>Price: &#8377 ${i.getPrice()}</h2>
+<h3>Brand:${i.getBrand()}</h3></div>
+
 </c:forEach>
 
 </div>

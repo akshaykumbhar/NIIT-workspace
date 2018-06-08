@@ -11,8 +11,17 @@ public class Product {
 	String Name;
 	String Price;
 	String Seller;
+	String Brand;
 	String Description;
 	int numberofhit;
+	
+	
+	public String getBrand() {
+		return Brand;
+	}
+	public void setBrand(String brand) {
+		Brand = brand;
+	}
 	public int getProductId() {
 		return productId;
 	}

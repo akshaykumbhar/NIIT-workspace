@@ -17,10 +17,9 @@ ${acc}
 ${admin}
 </div>
 </header>
-<div>
-<h1 class="alertm">Welcome admin</h1></div>
-<a href="adminep"><button class="btn-normal">Product Details</button></a>
-<a href="admineu"><button class="btn-normal">User Details</button></a>
+<h1 class="alertm" style="display:block;margin-bottom:4%;font-size:330%;">Welcome admin</h1>
+<a href="adminep"><button class="btn-normal" style="border-color:#00ff00;height: 6%;width: 84%;float:left;border-radius:5px;margin-top:20px;margin-bottom:20px;margin-left:7%;background-color:#70df00;">Product Details</button></a>
+<a href="admineu"><button class="btn-normal" style="border-color:#00ff00;height: 6%;width: 84%;float:left;border-radius:5px;margin-top:20px;margin-bottom:20px;margin-left:7%;background-color:#70df00;">User Details</button></a>
 
 </body>
 </html>

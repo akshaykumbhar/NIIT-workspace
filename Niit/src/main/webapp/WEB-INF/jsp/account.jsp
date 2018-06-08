@@ -17,11 +17,17 @@ ${acc}
 ${admin}
 </div>
 </header>
-<div>
-<h1 style="color:white;">Username ${user.getUsername()}</h1>
-<h2 style="color:white;">Password ${user.getPassword()}</h2>
+<div style="padding-top: 2%;padding-left: 7%;font-size: 123%; margin-bottom:30px;color:white;">
+<h1 style="color:white;">Username: ${user.getUsername()}</h1>
+<h2 style="color:white;">Password: ${user.getPassword()}</h2>
+<h2 style="color:white;">FirstName: ${user.getFname()}</h2>
+<h2 style="color:white;">Last Name: ${user.getLname()}</h2>
+<h2 style="color:white;">PhoneNo.: ${user.getPhone()}</h2>
+<h2 style="color:white;">Address: ${user.getAddress()}</h2>
+
 </div>
 
+<a href="accountedit" ><button class="btn-normal" style="border-color:#00ff00;height: 6%;width: 84%;float:left;border-radius:5px;margin-top:20px;margin-bottom:20px;margin-left:7%;background-color:#70df00;">Edit</button></a>
 
 </body>
 </html>

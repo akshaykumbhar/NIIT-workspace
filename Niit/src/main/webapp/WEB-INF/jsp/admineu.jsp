@@ -18,18 +18,28 @@ ${admin}
 </div>
 </header>
 <div>
-<table border="1" style="background-color:white">
+<table border="1" style="margin-left:0.5%;width: 99%;font-size: 116%;">
 <tr>
 <th>Username</th>
 <th>password</th>
-<th>Edit</th>
+<th>Email</th>
+<th>Firstname</th>
+<th>lastname</th>
+<th>PhoneNo.</th>
+<th>Address</th>
+
 <th>Delete</th>
 </tr>
 <c:forEach items="${user}" var="i">
 <tr>
 <td>${i.getUsername()}</td>
 <td>${i.getPassword()}</td>
-<td><a href="admineditu?user=${i.getUsername()}">Edit</a></td>
+<td>${i.getEmail()}</td>
+<td>${i.getFname()}</td>
+<td>${i.getLname()}</td>
+<td>${i.getPhone()}</td>
+<td>${i.getAddress()}</td>
+
 <td><a href="admindel?user=${i.getUsername()}">Delete</a></td>
 </tr>
 </c:forEach>

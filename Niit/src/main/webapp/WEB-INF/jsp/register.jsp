@@ -19,14 +19,22 @@
 </div>
 </header>
 <h1 id="a1"class="alertm">Register Failed</h1>
-<div class="login-container">
+<div class="login-container" style="height:800px;margin-bottom:30px">
 <form action="userregister" method="post" style="padding-top: 7%;padding-left: 7%;font-size: 149%;">
 Email<br>
 <input type="text" name="email" ><br>
+First Name<br>
+<input type="text" name="fname" ><br>
+Last Name<br>
+<input type="text" name="lname" ><br>
 Username<br>
 <input type="text" name="username" ><br>
 Password<br>
 <input type="password" name="password"><br>
+Phone number<br>
+<input type="text" name="phone" ><br>
+Address<br>
+<input type="text" name="address" ><br>
 <input type="submit" class="btn-normal" value="Sign-in" style="border-color:#00ff00;height: 13%;width: 90%;float:left;border-radius:5px;margin-top:20px;background-color:#70df00;">
 </form>
 <br>

@@ -18,11 +18,11 @@ ${admin}
 </div>
 </header>
 
-<div  style="margin-top:-10px;width=100%">
+<div  style="margin-top:-10px;width:100%">
 
 <c:forEach items="${product}" var="i">
 <div class="product">
-<h1>${i.getName()}</h1>
+<h1><a href="productpage?id=${i.getProductId()}">${i.getName()}</a></h1>
 <h2>Price:${i.getPrice()}</h2>
 <h3>Decription:${i.getDescription()}</h3></div>
 </c:forEach>

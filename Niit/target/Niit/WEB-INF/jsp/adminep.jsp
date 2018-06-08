@@ -17,10 +17,11 @@ ${acc}
 ${admin}
 </div>
 </header>
-<table border="1" style="background-color:white">
+<table border="1" style="margin-top: 2%;margin-left: 7%;font-size: 149%; margin-bottom:30px;color:white;width:84%;">
 <tr>
 <th>ProductID</th>
 <th>Name</th>
+<th>brand</th>
 <th>Seller</th>
 <th>Description</th>
 <th>Edit</th>
@@ -30,6 +31,7 @@ ${admin}
 <tr>
 <td>${i.getProductId()}</td>
 <td>${i.getName()}</td>
+<td>${i.getBrand()}</td>
 <td>${i.getPrice()}</td>
 <td>${i.getSeller()}</td>
 <td><a href="admineditp?id=${i.getProductId()}">Edit</a></td>
@@ -37,5 +39,6 @@ ${admin}
 </tr>
 </c:forEach>
 </table>
+<a href="addpro"><button class="btn-normal" style="border-color:#00ff00;height: 6%;width: 84%;float:left;border-radius:5px;margin-top:20px;margin-bottom:20px;margin-left:7%;background-color:#70df00;">Add new Product</button></a>
 </body>
 </html>
